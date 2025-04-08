@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoLWinner Overlay</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://cdn.wallpapersafari.com/40/94/8fbDOH.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: 'Aboreto';font-size: 22px;
+            pointer-events: none;
+        }
+
+        .overlay-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 300px;
+            padding: 15px;
+            background: #000;
+            border: 2px solid #f0a500;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.8);
+        }
+
+        .header {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ffcc00;
+            background: #000000;
+            border-radius:5px;
+            
+        }
+      
+
+.overlay-container {
+    pointer-events: auto;
+}
+
+
+        .champion-section {
+            margin-bottom: 15px;
+        }
+
+
+        .champion-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .champion-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid #ff8800;
+        }
+
+        .champion-stats {
+            font-size: 0.9em;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.85em;
+            color: #ffdd77;
+        }
+
+        .footer a {
+            color: #ffcc33;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay-container">
+        <div id="drag-bar" style="width: 100%; height: 30px; cursor: move;"></div>
+
+        <div class="header">LOLWINNER OVERLAY</div>
+        
+
+        <div class="champion-section">
+
+            <div class="champion-info">
+                <img src="https://th.bing.com/th/id/OIP.LzZgjqn1V9aHNM5jOLpuSwHaI8?rs=1&pid=ImgDetMain" alt="Yone" class="champion-image">
+                <div class="champion-stats">
+                    <p><strong>Champion:</strong> Yone</p>
+                    <p><strong>Role:</strong> Mid</p>
+                    <p><strong>KDA:</strong> 5/2/8</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            AadiLASA | <a href="https://github.com/AadiLASA/LeagueWinner">More Info</a>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // Allow dragging the window from the drag-bar
+    document.getElementById("drag-bar").addEventListener("mousedown", function () {
+        overwolf.windows.getCurrentWindow(function (result) {
+            if (result.status === "success") {
+                overwolf.windows.dragMove(result.window.id);
+            }
+        });
+    });
+</script>
+<script src="xgboost.js"></script>
+<script src="logic.js"></script>
