@@ -2,10 +2,10 @@
 	"manifest_version": 1,
 	"type": "WebApp",
 	"meta": {
-	  "name": "LoL CS Tracker",
-	  "author": "YourName",
+	  "name": "LoL CS/Win Tracker",
+	  "author": "Aaditya R. Bhat",
 	  "version": "1.0.0",
-	  "description": "Tracks CS per minute in League of Legends",
+	  "description": "Tracks CS per minute & Win Probability in League of Legends",
 	  "minimum-overwolf-version": "0.199.0.15",
 	  "icon": "IconMouseOver.png",
 	  "icon_gray": "IconMouseNormal.png"
