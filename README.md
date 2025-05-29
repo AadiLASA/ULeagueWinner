@@ -1,1 +1,17 @@
 # LeagueWinner
+
+
+
+Creating Browser Input
+==========================
+python -m http.server 8000 
+open tfjs_model/index.html
+
+Keras->Json Format
+==========================
+trainmodel.py
+Conversion.py 
+
+Not Sure if Still Relevant
+==========================
+tensorflowjs_converter --input_format keras league_win_predictor.keras testing  
